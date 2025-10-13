@@ -32,16 +32,18 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
                 return (
                   <div class="group relative">
-                    <Component
-                      {...linkProps}
-                      class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                        project.link
-                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
-                          : ""
-                      }`}
+                    <div
+                      class="block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
                     >
+                      {/* Optional top-right icon for a primary link (keeps old behavior, but no longer wraps the whole card) */}
                       {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 hover:bg-gray-700"
+                          aria-label="Open project link"
+                        >
                           <svg
                             class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                             fill="none"
@@ -52,10 +54,10 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-width="2"
-                              d="M7 17L17 7M17 7H7M17 7V17"
+                              d="M7 17L17 7M7 7h10v10"
                             />
                           </svg>
-                        </div>
+                        </a>
                       )}
 
                       <div class="space-y-4">
@@ -71,19 +73,44 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           </h3>
                         </div>
 
-                        <p
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
-                        >
+                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
                           {project.description}
                         </p>
+
+                        {/* New: Dual-link buttons */}
+                        {(project.repo || project.paper) && (
+                          <div class="flex flex-wrap gap-2 pt-2">
+                            {project.repo && (
+                              <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-gray-300 text-sm sm:text-base font-medium transition-all duration-200 hover:border-gray-400"
+                                aria-label="Open GitHub repository"
+                              >
+                                GitHub
+                              </a>
+                            )}
+                            {project.paper && (
+                              <a
+                                href={project.paper}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-white text-sm sm:text-base font-medium transition-all duration-200"
+                                style={{ backgroundColor: siteConfig.accentColor }}
+                                aria-label="Open PDF document"
+                              >
+                                PDF
+                              </a>
+                            )}
+                          </div>
+                        )}
 
                         {project.skills && project.skills.length > 0 && (
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                             {project.skills.map((skill) => (
                               <span
-                                class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.link ? "group-hover:bg-gray-800" : ""
-                                }`}
+                                class="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 group-hover:bg-gray-800"
                               >
                                 {skill}
                               </span>
@@ -91,7 +118,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           </div>
                         )}
                       </div>
-                    </Component>
+                    </div>
                   </div>
                 );
               })}

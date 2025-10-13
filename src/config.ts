@@ -1,92 +1,159 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Anesa Ibrahimi",
+  title: "Artificial Intelligence Graduate",
+  description: "Portfolio website of Anesa Ibrahimi",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "anesaibrahimi26@gmail.com",
+    linkedin: "https://www.linkedin.com/in/anesa-ibrahimi/",
+    // twitter: "https://x.com/rfitzio",
+    github: "https://github.com/anesaibr",
+    cv : "/Anesa_Ibrahimi_Personal_CV.pdf"
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "Recent MSc Artificial Intelligence graduate (UvA) passionate about Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, and Robotics. I enjoy building end-to-end research prototypes and production-ready systems, from modeling to evaluation. Highlights: memory-augmented ViT thesis; multi-modal NAO robot interaction; arXiv publication on in-context learning for VLMs.",
+  skills: [
+    "Python",
+    "SQL",
+    "MATLAB",
+    "PyTorch",
+    "TensorFlow",
+    "Keras",
+    "Machine Learning",
+    "Deep Learning",
+    "Computer Vision",
+    "Reinforcement Learning",
+    "Foundational Models",
+    "Natural Language Processing",
+    "Data Analysis"
+  ],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Fine-grained image understanding with VLMs (Master Thesis)",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Designed a memory-augmented Vision Transformer by injecting trainable key-value memory into MLP layers and trained it via knowledge distillation from CLIP. Achieved SOTA-level gains on long-caption, fine-grained retrieval benchmarks. Ran on HPC (Slurm; A100/H100).",
+      repo: "https://github.com/anesaibr/open_clip", 
+      paper: "/Anesa_Ibrahimi_Thesis_AI_Final.pdf",
+      skills: ["Python", "PyTorch", "Vision Transformers","Foundational Models","CLIP", "CUDA", "HPC"]
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "In-Context Learning Improves Compositional Understanding of VLMs",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Compared contrastive vs. generative VLMs; analyzed data/architectures; applied ICL to boost compositional reasoning. Published at ICML ‘Foundation Models in the Wild’ Workshop.",
+      link: "https://arxiv.org/abs/2407.15487",
+      repo: "https://github.com/HoeZey/vlm-compositionality",
+      paper: "/ICL_ICML_paper.pdf",
+      skills: ["Python", "VLMs", "ICL", "Evaluation", "Benchmarking"]
     },
     {
-      name: "ExtensionKit",
+      name: "Multi-Modal NAO Robot (Socially Intelligent Robotics)",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Led a 7-member team to build real-time multi-modal emotion recognition and empathetic response for NAO, integrating speech, text, and vision models with emotional TTS (OpenVoice). Conducted user trials on empathy and satisfaction.",
+      link: "", // add demo/video if available
+      paper: "/SIR_Final_Report_Gr_21.pdf",
+      skills: ["Python", "PyTorch", "HuggingFace", "OpenVoice", "Docker", "NAO"]
     },
+
+    {
+      name: "AI for Medical Imaging (AI4MI)",
+      description:
+        "Developed and evaluated deep learning models for automatic segmentation of thoracic organs at risk (OARs) in CT scans using the SegTHOR dataset. Implemented and compared CNN-based architectures including ENet, UNet, UNet++ and DeepLabV3+, optimizing loss functions to address class imbalance.",
+      repo: "https://github.com/prundeanualin/ai4mi_project",
+      paper: "/AI4MI_Final_Report_Gr_13.pdf",
+      skills: [
+        "Python",
+        "PyTorch",
+        "Medical Image Segmentation",
+        "Deep Learning",
+        "Computer Vision",
+        "CNNs",
+        "UNet",
+        "Data Augmentation"
+      ]
+    },
+
+    {
+      name: "LLM4CS",
+      description:
+        "Reproduced and extended the LLM4CS framework to test reproducibility in conversational information retrieval. Verified prompting strategies with GPT-3.5, introduced sparse BM25 retrieval and the open-source Llama 3.1-8B model, and addressed major reproducibility challenges in dense retrieval pipelines.",
+      repo: "https://github.com/angelbujalance/LLM4CS",
+      paper: "/ACM_Conference_Proceedings_LLM4CS.pdf",
+      skills: [
+        "Python",
+        "Pyserini",
+        "Information Retrieval",
+        "Large Language Models",
+        "Conversational Search",
+        "Dense & Sparse Retrieval",
+        "Prompt Engineering"
+      ]
+    },
+
+    {
+      name: "Instance Diffusion — Extension",
+      description:
+        "Automated instance prompts and bounding boxes with an LLM to reduce manual inputs for instance-aware diffusion. Improved efficiency while maintaining alignment with original study metrics.",
+      link: "",
+      repo : "https://github.com/Jellemvdl/InstanceDiffusion-extension",
+      skills: ["Python", "LLM", "Deep Learning", "Computer Vision" ,  "Diffusion Models"]
+    },
+    // {
+    //   name: "LICO (FACT in AI)",
+    //   description:
+    //     "Reproduced a project integrating linguistic prompts with visual features to improve interpretability in image classification.",
+    //   link: "",
+    //   skills: ["Python", "NLP", "Explainability", "Jupyter"]
+    // },
+
+
+
+    {
+      name: "Optimizing Locomotion with Evolutionary Algorithms in MuJoCo (BSc Thesis)",
+      description:
+        "Evaluated CMA-ES, XNES, and SNES on continuous control in the MuJoCo Ant environment. Built a full simulation + optimization pipeline across 100 environments; ran quantitative and qualitative benchmarks.",
+      link: "",
+      paper: "/VU_AI_Bachelor_Thesis_Anesa.pdf",
+      skills: ["Python", "MuJoCo", "OpenAI Gym", "EvoTorch", "NumPy", "Matplotlib"]
+    }
   ],
+
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Vrije Universiteit Amsterdam",
+      title: "Professor's Assistant — Databases",
+      dateRange: "Mar 2023 – May 2023",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
-      ],
+        "Planned and taught weekly practicals for relational database systems.",
+        "Guided students in database modeling and SQL (search/update).",
+        "Monitored and supported student progress."
+      ]
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "Vrije Universiteit Amsterdam",
+      title: "Professor's Assistant — Human-Computer Interaction",
+      dateRange: "Mar 2022 – May 2022",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
-    },
+        "Led weekly practicals on interactive systems principles and techniques.",
+        "Coached students on low/high-fidelity prototyping and evaluation.",
+        "Tracked student progress and provided feedback."
+      ]
+    }
   ],
+
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
-      achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
+      school: "Universiteit van Amsterdam",
+      degree: "MSc Artificial Intelligence",
+      dateRange: "2023 – 2025",
+      achievements: []
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
+      school: "Vrije Universiteit Amsterdam",
+      degree: "BSc Artificial Intelligence",
+      specialization: "Intelligent Systems",
+      minor : "Data Science",
+      dateRange: "2020 – 2023",
+      achievements: []
     },
-  ],
+  ]
 };
