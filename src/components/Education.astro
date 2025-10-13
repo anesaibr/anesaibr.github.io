@@ -9,9 +9,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 mb-2">
               Education
             </h2>
+
             <div
               class="w-[75px] h-[5px] mt-2 rounded-full"
               style={`background-color: ${siteConfig.accentColor}`}
@@ -49,7 +50,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                         </div>
                       )}
                     </div>
-                    
+
                     <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
                       {edu.dateRange}
                     </span>
