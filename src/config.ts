@@ -113,6 +113,7 @@ export const siteConfig = {
         "Evaluated CMA-ES, XNES, and SNES on continuous control in the MuJoCo Ant environment. Built a full simulation + optimization pipeline across 100 environments; ran quantitative and qualitative benchmarks.",
       link: "",
       paper: "/VU_AI_Bachelor_Thesis_Anesa.pdf",
+      demoLink: "/cmaes_700_0.4_0.1.mp4",
       skills: ["Python", "MuJoCo", "OpenAI Gym", "EvoTorch", "NumPy", "Matplotlib"]
     }
   ],
