@@ -8,7 +8,7 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/anesa-ibrahimi/",
     // twitter: "https://x.com/rfitzio",
     github: "https://github.com/anesaibr",
-    cv : "/Personal_CV_wopw.pdf"
+    cv : "/Personal_CV_Anesa_Ibrahimi.pdf"
   },
   aboutMe:
     "Recent MSc Artificial Intelligence graduate (UvA) passionate about Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, and Robotics. I enjoy building end-to-end research prototypes and production-ready systems, from modeling to evaluation. Highlights: memory-augmented ViT thesis; multi-modal NAO robot interaction; arXiv publication on in-context learning for VLMs.",
