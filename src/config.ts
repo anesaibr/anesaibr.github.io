@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Anesa Ibrahimi",
-  title: "Artificial Intelligence Graduate",
+  title: "CV & MLOps Engineer | MSc & BSc AI ",
   description: "Portfolio website of Anesa Ibrahimi",
   accentColor: "#1d4ed8",
   social: {
@@ -11,7 +11,7 @@ export const siteConfig = {
     cv : "/Personal_CV_Anesa_Ibrahimi.pdf"
   },
   aboutMe:
-    "Recent MSc Artificial Intelligence graduate (UvA) passionate about Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, and Robotics. I enjoy building end-to-end research prototypes and production-ready systems, from modeling to evaluation. Highlights: memory-augmented ViT thesis; multi-modal NAO robot interaction; arXiv publication on in-context learning for VLMs.",
+    "Computer Vision & Machine Learning Engineer with an MSc in Artificial Intelligence (UvA). Passionate about Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, and Robotics. I enjoy building end-to-end research prototypes and production-ready systems, from modeling to evaluation. Highlights: memory-augmented ViT thesis; multi-modal NAO robot interaction; arXiv publication on in-context learning for VLMs.",
   skills: [
     "Python",
     "SQL",
@@ -22,6 +22,7 @@ export const siteConfig = {
     "Machine Learning",
     "Deep Learning",
     "Computer Vision",
+    "Multi-Modal AI",
     "Reinforcement Learning",
     "Foundational Models",
     "Natural Language Processing",
@@ -119,6 +120,16 @@ export const siteConfig = {
   ],
 
   experience: [
+    {
+      company: "ARTIDIS AG",
+      title: "CV & MLOps Engineer — Internship",
+      dateRange: "May 2026 – Present",
+      bullets: [
+        "Developed computer vision and machine learning models for biomedical applications.",
+        "Collaborated with cross-functional teams to integrate AI solutions into existing workflows.",
+        "Conducted experiments and analyzed results to optimize model performance."
+      ]
+    },
     {
       company: "Vrije Universiteit Amsterdam",
       title: "Professor's Assistant — Databases",
